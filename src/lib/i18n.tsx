@@ -32,24 +32,27 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      tag: "General Contracting",
-      title: "Building Iraq’s",
-      titleAccent: "Future",
-      subtitle:
-        "Construction, infrastructure, and electrical works delivered with quality and integrity.",
-      viewProjects: "View Projects",
-      contactUs: "Contact Us",
-    },
+    tag: "Trusted Iraqi Contractor",
+    title: "Building Iraq’s Future",
+    titleAccent: "with Confidence & Expertise",
+    subtitle:
+      "NURDAR Al Faisal for General Contracting delivers high-quality civil, infrastructure, and electrical projects with professionalism, integrity, and technical excellence.",
+    viewProjects: "View Projects",
+    contactUs: "Contact Us",
+  },
+
     about: {
-      header: "About Company",
-      subHeader: "A trusted partner in general contracting across Iraq.",
-      leadership: "Leadership",
-      mdMessage: "Managing Director Message",
-      companyDetails: "Company Details",
-      vision: "Vision",
-      objectives: "Objectives",
-      values: "Values",
-    },
+    header: "About Company",
+    subHeader:
+      "Learn about our history, our leadership, and our vision for the future of construction in Iraq.",
+    leadership: "Leadership",
+    mdMessage: "Message from the Managing Director",
+    companyDetails: "Company Details",
+    vision: "Our Vision",
+    objectives: "Our Objectives",
+    values: "Our Values",
+  },
+
   },
   ar: {
     nav: {
@@ -60,22 +63,26 @@ export const translations = {
       contact: "تواصل",
     },
     hero: {
-      tag: "مقاولات عامة",
-      title: "نبني",
-      titleAccent: "مستقبل العراق",
-      subtitle: "أعمال إنشاءات وبنى تحتية وأعمال كهربائية بجودة ومصداقية.",
-      viewProjects: "عرض المشاريع",
-      contactUs: "تواصل معنا",
-    },
+    tag: "شريك عراقي موثوق",
+    title: "نبني مستقبل العراق",
+    titleAccent: "بثقة وخبرة",
+    subtitle:
+      "شركة نوردار الفيصل للمقاولات العامة تقدم مشاريع إنشائية وبنى تحتية وكهربائية عالية الجودة وفق أعلى المعايير المهنية والفنية.",
+    viewProjects: "مشاريعنا",
+    contactUs: "تواصل معنا",
+  },
+
     about: {
-      header: "عن الشركة",
-      subHeader: "شريك موثوق في المقاولات العامة داخل العراق.",
-      leadership: "الإدارة",
-      mdMessage: "رسالة المدير المفوض",
-      companyDetails: "بيانات الشركة",
-      vision: "الرؤية",
-      objectives: "الأهداف",
-      values: "القيم",
-    },
+    header: "حول الشركة",
+    subHeader:
+      "تعرف على تاريخنا وقيادتنا ورؤيتنا لمستقبل البناء والتنمية في العراق.",
+    leadership: "القيادة",
+    mdMessage: "رسالة المدير المفوض",
+    companyDetails: "بيانات الشركة",
+    vision: "رؤيتنا",
+    objectives: "أهدافنا",
+    values: "قيمنا",
+  },
+
   },
 } as const;

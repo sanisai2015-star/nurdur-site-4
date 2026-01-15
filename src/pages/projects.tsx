@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -13,6 +14,7 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { language } = useLanguage();
   return (
     <div className="min-h-screen bg-background flex flex-col font-sans">
       <Navbar />
@@ -20,9 +22,9 @@ export default function Projects() {
       <main className="flex-grow pt-20">
         <section className="bg-slate-50 py-20 border-b border-border">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">Our Projects</h1>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">{language === 'en' ? 'Our Projects' : 'مشاريعنا'}</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              A showcase of our commitment to excellence in executing diverse construction and infrastructure projects across Iraq.
+              {language === 'en' ? 'Selected projects reflecting our commitment to quality, safety, and technical excellence.' : 'نماذج من مشاريعنا التي تعكس التزامنا بالجودة والسلامة والتميز الفني.'}
             </p>
           </motion.div>
         </section>
@@ -38,12 +40,12 @@ export default function Projects() {
                         <span className="font-semibold">Project Image</span>
                       </div>
                       <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span className="text-white font-semibold">View Details</span>
+                        <span className="text-white font-semibold">{language === 'en' ? 'View Details' : 'عرض التفاصيل'}</span>
                       </div>
                     </div>
                     <CardContent className="space-y-4">
                       <div className="flex justify-between items-start">
-                        <Badge variant={project.status === "Completed" ? "default" : "secondary"}>{project.status}</Badge>
+                        <Badge variant={project.status === "Completed" ? "default" : "secondary"}>{language === 'en' ? project.status : (project.status === 'Completed' ? 'منجز' : 'قيد التنفيذ')}</Badge>
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">{project.type}</span>
                       </div>
                       <div>

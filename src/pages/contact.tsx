@@ -29,7 +29,7 @@ export default function Contact() {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
               {language === "en"
-                ? "Get in touch with our team for project inquiries, quotes, or partnership opportunities."
+                ? "{language === 'en' ? 'Get in touch with our team for project inquiries, quotations, or partnership opportunities.' : 'تواصل مع فريقنا للاستفسارات وعروض الأسعار وفرص الشراكة.'}"
                 : "تواصل مع فريقنا للاستفسارات أو عروض الأسعار أو فرص الشراكة."}
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="space-y-8">
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold font-heading">{language === "en" ? "Get In Touch" : "ابقَ على تواصل"}</h2>
+                  <h2 className="text-2xl font-bold font-heading">{language === "en" ? "{language === 'en' ? 'Get In Touch' : 'ابقَ على تواصل'}" : "ابقَ على تواصل"}</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     {language === "en"
                       ? "We are available to discuss your construction needs and provide detailed consultations."
@@ -87,7 +87,7 @@ export default function Contact() {
               </motion.div>
 
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white p-8 rounded-xl shadow-lg border border-border h-fit">
-                <h2 className="text-2xl font-bold font-heading mb-6">{language === "en" ? "Send a Message" : "أرسل رسالة"}</h2>
+                <h2 className="text-2xl font-bold font-heading mb-6">{language === "en" ? "{language === 'en' ? 'Send a Message' : 'أرسل رسالة'}" : "أرسل رسالة"}</h2>
 
                 <form onSubmit={onSubmit} className="space-y-6">
                   <div className="space-y-2">

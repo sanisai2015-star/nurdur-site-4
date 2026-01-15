@@ -70,8 +70,8 @@ export default function Home() {
 
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   {language === "en"
-                    ? `Established in 2022 to meet the growing needs of Iraq's reconstruction, NURDAR Al Faisal has quickly become a trusted name in general contracting. With a capital of 1 Billion IQD and a "Fifth Rank A" classification, we bring professional expertise to every project.`
-                    : "تأسست شركة نوردار الفيصل في عام 2022 لتلبية المتطلبات المتزايدة لإعادة الإعمار في العراق، وسرعان ما أصبحت اسماً موثوقاً به في مجال المقاولات العامة. برأس مال قدره مليار دينار عراقي وتصنيف (الدرجة الخامسة أ)، نقدم خبرات مهنية لكل مشروع."}
+                    ? `Founded in 2022, NURDAR Al Faisal for General Contracting Co. L.L.C. was established to meet the growing demands of Iraq’s reconstruction and development sector. Headquartered in Baghdad, the company operates with a paid-in capital of IQD 1,000,000,000 and holds an official Fifth Rank (A) classification from the Iraqi Ministry of Planning.`
+                    : "تأسست شركة نوردار الفيصل للمقاولات العامة ذ.م.م في عام 2022 لتلبية متطلبات إعادة الإعمار والتنمية في العراق. يقع مقر الشركة في بغداد، ويبلغ رأس مالها المدفوع 1,000,000,000 دينار عراقي، وتحمل تصنيف الدرجة الخامسة (أ) من وزارة التخطيط العراقية."}
                 </p>
 
                 <p className="text-muted-foreground text-lg leading-relaxed">

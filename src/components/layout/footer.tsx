@@ -1,8 +1,10 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
+  const { language } = useLanguage();
   return (
     <footer className="bg-slate-900 text-slate-200 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -28,18 +30,18 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-white font-heading font-semibold text-lg">Quick Links</h4>
+            <h4 className="text-white font-heading font-semibold text-lg">{language === 'en' ? 'Quick Links' : 'روابط سريعة'}</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about"><span className="cursor-pointer hover:text-primary transition-colors">About Company</span></Link></li>
               <li><Link href="/services"><span className="cursor-pointer hover:text-primary transition-colors">Our Services</span></Link></li>
               <li><Link href="/projects"><span className="cursor-pointer hover:text-primary transition-colors">Projects</span></Link></li>
-              <li><Link href="/contact"><span className="cursor-pointer hover:text-primary transition-colors">Contact Us</span></Link></li>
+              <li><Link href="/contact"><span className="cursor-pointer hover:text-primary transition-colors">{language === 'en' ? 'Contact Us' : 'تواصل معنا'}</span></Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-white font-heading font-semibold text-lg">Core Services</h4>
+            <h4 className="text-white font-heading font-semibold text-lg">{language === 'en' ? 'Core Services' : 'الخدمات الأساسية'}</h4>
             <ul className="space-y-2 text-sm">
               <li className="text-slate-400">Building Construction</li>
               <li className="text-slate-400">Infrastructure Development</li>
@@ -51,7 +53,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-white font-heading font-semibold text-lg">Contact Us</h4>
+            <h4 className="text-white font-heading font-semibold text-lg">{language === 'en' ? 'Contact Us' : 'تواصل معنا'}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { useLanguage } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
 import excavatorImage from "@assets/generated_images/excavator.jpg";
@@ -7,7 +8,7 @@ import substationImage from "@assets/generated_images/substation.jpg";
 
 const servicesList = [
   {
-    category: "Construction & Civil Works",
+    category: language === "en" ? "Construction & Civil Works" : "الإنشاءات والأعمال المدنية",
     image: excavatorImage,
     items: [
       "Commercial, residential, and public building works",
@@ -20,7 +21,7 @@ const servicesList = [
     ],
   },
   {
-    category: "Electrical Engineering",
+    category: language === "en" ? "Electrical Engineering" : "الهندسة الكهربائية",
     image: substationImage,
     items: [
       "Electricity line poles, laying cables, connectivity, and wiring",
@@ -49,6 +50,7 @@ const machineryList = [
 ];
 
 export default function Services() {
+  const { language } = useLanguage();
   return (
     <div className="min-h-screen bg-background flex flex-col font-sans">
       <Navbar />
@@ -56,9 +58,9 @@ export default function Services() {
       <main className="flex-grow pt-20">
         <section className="bg-slate-50 py-20 border-b border-border">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">{language === 'en' ? 'Our Services' : 'خدماتنا'}</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              We provide comprehensive engineering and construction solutions using the latest technologies and equipment.
+              {language === 'en' ? 'Comprehensive construction & engineering services for public and private sector projects across Iraq.' : 'نقدم خدمات إنشائية وهندسية متكاملة لمشاريع القطاعين العام والخاص في مختلف محافظات العراق.'}
             </p>
           </motion.div>
         </section>
