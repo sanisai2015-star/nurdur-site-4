@@ -50,15 +50,26 @@ export default function Contact() {
 
                 <div className="grid gap-6">
                   {[
-                    { icon: MapPin, title: language === "en" ? "Our Location" : "العنوان", content: "Palestine St., Mayslon Square
-Baghdad, Iraq" },
-                    { icon: Phone, title: language === "en" ? "Phone Numbers" : "أرقام الهاتف", content: "+964 772 846 0390
-+964 790 152 3478
-+964 770 443 9842" },
-                    { icon: Mail, title: language === "en" ? "Email Address" : "البريد الإلكتروني", content: "companyemaar@gmail.com
-sabah.j.d1972@gmail.com" },
-                    { icon: Clock, title: language === "en" ? "Working Hours" : "ساعات العمل", content: "Saturday - Thursday: 8:00 AM - 5:00 PM
-Friday: Closed" },
+                    {
+                      icon: MapPin,
+                      title: language === "en" ? "Our Location" : "العنوان",
+                      content: `Palestine St., Mayslon Square\nBaghdad, Iraq`,
+                    },
+                    {
+                      icon: Phone,
+                      title: language === "en" ? "Phone Numbers" : "أرقام الهاتف",
+                      content: `+964 772 846 0390\n+964 790 152 3478\n+964 770 443 9842`,
+                    },
+                    {
+                      icon: Mail,
+                      title: language === "en" ? "Email Address" : "البريد الإلكتروني",
+                      content: `companyemaar@gmail.com\nsabah.j.d1972@gmail.com`,
+                    },
+                    {
+                      icon: Clock,
+                      title: language === "en" ? "Working Hours" : "ساعات العمل",
+                      content: `Saturday - Thursday: 8:00 AM - 5:00 PM\nFriday: Closed`,
+                    },
                   ].map((item, i) => (
                     <Card key={i}>
                       <CardContent className="p-6 flex items-start gap-4">
